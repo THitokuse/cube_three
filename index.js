@@ -23,4 +23,11 @@ function init() {
   const material = new THREE.MeshStandardMaterial({color: 0x0000FF});
   const box = new THREE.Mesh(geometry, material);
   scene.add(box);
+
+  // 平行光源
+  const light = new THREE.DirectionalLight(0xFFFFFF);
+  light.intensity = 2; // 光の強さを倍に
+  light.position.set(1, 1, 1);
+  // シーンに追加
+  scene.add(light);
 }
